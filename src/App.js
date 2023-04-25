@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import ToDoState from "./components/ToDoState";
 import AddTasks from "./components/AddTask";
 import {useState} from "react";
 import RepoLink from "./components/RepoLink";
 import TaskList from "./components/TaskList";
-import VisitReducerState from "./components/VisitReducerState";
+import VisitReducerApp from "./components/VisitReducerApp";
+
 
 function App() {
     const [tasks, setTasks] = useState(initialTasks);
@@ -44,7 +44,6 @@ function App() {
                     To Do Application
                 </h1>
                 <h6 className="my-h6">'Using useState'</h6>
-                {/*<ToDoState/>*/}
                 <AddTasks onAddTask={handleAddTask}/>
                 <RepoLink/>
                 <TaskList
@@ -52,7 +51,7 @@ function App() {
                     onChangeTask={handleChangeTask}
                     onDeleteTask={handleDeleteTask}
                 />
-                <VisitReducerState/>
+                <VisitReducerApp/>
             </header>
         </div>
     );
